@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaslight Psychedelics</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #1e3a5f;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #111;
+            padding: 10px;
+        }
+        header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            background-color: #222;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        }
+        nav a {
+            display: block;
+            color: #1e3a5f;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: transform 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            transform: scale(1.2);
+            color: #fff;
+        }
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .hidden-link {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Gaslight Psychedelics Logo">
+        <h1>Gaslight Psychedelics</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="alert('You're not tripping, you're just acting crazy right now')">Buy Mushrooms</a>
+        <a href="#" onclick="alert('I already told you we don\'t sell that')">Buy DMT</a>
+        <a href="#" class="hidden-link" onclick="alert('You were never supposed to find this')">Secret Link</a>
+    </nav>
+    <main>
+        <h2>Welcome!</h2>
+        <p>You’re not tripping, you’re just acting crazy right now.</p>
+    </main>
+</body>
+</html>
