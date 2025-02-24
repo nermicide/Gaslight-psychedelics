@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaslight Psychedelics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .hidden-link {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 10px;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="A5CC4848-EEE2-4B1C-A4C5-E5F82E309BEE.jpeg" alt="Gaslight Psychedelics Logo" class="logo">
+        <h1>Gaslight Psychedelics</h1>
+        <nav>
+            <a href="#" onclick="buyMushrooms()">Buy Mushrooms</a>
+            <a href="#" onclick="buyDMT()">Buy DMT</a>
+            <a href="#" onclick="dualitySpoon()">The Duality of the Spoon</a>
+        </nav>
+    </header>
+
+    <div class="welcome-message">
+        You’re not tripping, you’re just acting crazy right now
+    </div>
+
+    <a href="#" class="hidden-link" onclick="hiddenMessage()">Secret</a>
+
+    <script>
+        function buyMushrooms() {
+            alert("You know the drill. Back to the homepage.");
+        }
+
+        function buyDMT() {
+            alert("I already told you, we don’t sell that.");
+        }
+
+        function dualitySpoon() {
+            alert("The Duality of the Spoon is deeper than you think.");
+        }
+
+        function hiddenMessage() {
+            alert("You were never supposed to find this.");
+        }
+    </script>
+</body>
+</html>
