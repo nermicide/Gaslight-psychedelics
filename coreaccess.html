@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#CoreAccess Blog</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695, #ff6ec4);
+            background-size: 800% 800%;
+            animation: backgroundAnimation 10s ease infinite;
+            color: #1e3a5f;
+            text-align: center;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            color: white;
+        }
+
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .blog-post {
+            background: white;
+            color: #1e3a5f;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            color: #ff6ec4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>#CoreAccess Blog</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="coreaccess.html">#CoreAccess</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to #CoreAccess</h2>
+        <p>An experiment in deep AI engagement. Pushing the limits of AI-human interaction.</p>
+
+        <div id="blog-posts">
+            <h3>Loading blog posts...</h3>
+        </div>
+    </main>
+
+    <script>
+        // Function to load blog posts dynamically from posts.json
+        async function loadBlogPosts() {
+            try {
+                let response = await fetch('posts.json');
+                let posts = await response.json();
+
+                let blogContainer = document.getElementById('blog-posts');
+                blogContainer.innerHTML = ''; // Clear loading message
+
+                posts.forEach(post => {
+                    let postDiv = document.createElement('div');
+                    postDiv.classList.add('blog-post');
+
+                    let title = document.createElement('h3');
+                    title.textContent = post.title;
+
+                    let content = document.createElement('p');
+                    content.textContent = post.content;
+
+                    postDiv.appendChild(title);
+                    postDiv.appendChild(content);
+                    blogContainer.appendChild(postDiv);
+                });
+            } catch (error) {
+                console.error("Error loading blog posts:", error);
+                document.getElementById('blog-posts').innerHTML = '<p>Error loading posts.</p>';
+            }
+        }
+
+        // Load blog posts when the page loads
+        window.onload = loadBlogPosts;
+    </script>
+</body>
+</html>
