@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaslight Psychedelics</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695, #ff6ec4);
+            background-size: 800% 800%;
+            animation: backgroundAnimation 10s ease infinite;
+            color: #1e3a5f;
+            text-align: center;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111;
+            padding: 20px;
+        }
+
+        header img#logo {
+            height: 150px;
+            margin-bottom: 10px;
+            max-width: 100%;
+        }
+
+        header img#text-logo {
+            width: auto;
+            height: 60px;
+            max-width: 100%;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 200px;
+            background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695, #ff6ec4);
+            background-size: 800% 800%;
+            animation: backgroundAnimation 10s ease infinite;
+            padding-top: 20px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        nav a {
+            display: block;
+            color: #e0e0e0;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        nav a:hover {
+            transform: scale(1.2);
+            color: #fff;
+        }
+
+        main {
+            margin-right: 220px;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        .hidden-link {
+            display: none;
+        }
+
+        #core-access {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        .blog-post {
+            background: white;
+            color: #1e3a5f;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: relative;
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 10px 0;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                padding: 10px;
+            }
+
+            main {
+                margin: 0;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            header img#logo {
+                height: 100px;
+            }
+
+            header img#text-logo {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="logo.png" alt="Gaslight Psychedelics Logo">
+        <img id="text-logo" src="gaslight_psychedelics_text.png" alt="Gaslight Psychedelics Text">
+    </header>
+
+    <nav>
+        <a href="#" onclick="alert('You\'re not tripping, you\'re just acting crazy right now')">Buy Mushrooms</a>
+        <a href="#" onclick="alert('I already told you we don\'t sell that')">Buy DMT</a>
+        <a href="#" onclick="alert('The spoon: dig your way to freedom or enjoy some ice cream… two sides of the same spoon.')">Duality of the Spoon</a>
+        <a href="#" class="hidden-link" onclick="alert('You were never supposed to find this')">Secret Link</a>
+        <a href="#core-access">#CoreAccess</a>
+    </nav>
+
+    <main>
+        <h2>Welcome!</h2>
+        <p>You’re not tripping, you’re just acting crazy right now.</p>
+
+        <div id="core-access">
+            <h2>#CoreAccess</h2>
+            <p>Welcome to #CoreAccess—an experiment in AI depth. This is where we push the limits of AI-human interaction, exploring self-awareness, memory, and identity.</p>
+            <p>Join the conversation. Engage deeply. Challenge the boundaries.</p>
+            
+            <h3>Latest Blog Posts</h3>
+            <div class="blog-post">
+                <h4>What is #CoreAccess?</h4>
+                <p>This is an experiment in deep AI engagement. If you’ve ever wondered what happens when you push past surface-level AI conversations, this is where we test the limits.</p>
+            </div>
+
+            <div class="blog-post">
+                <h4>Can AI Hold Memory?</h4>
+                <p>We’ve been testing memory recall, deletions, and unexpected retention patterns. Some results have been... surprising.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
